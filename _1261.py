@@ -30,7 +30,7 @@ while d:
             if dist[nowX][nowY] + graph[nextX][nextY] < dist[nextX][nextY]:
                 dist[nextX][nextY] = dist[nowX][nowY] + graph[nextX][nextY]
                 # 간선 비용이 0이라면 앞에 추가
-                if graph[nextX][nextY]:
+                if graph[nextX][nextY] == 0:
                    d.append([nextX, nextY])
                 else:
                     d.appendleft([nextX, nextY])
